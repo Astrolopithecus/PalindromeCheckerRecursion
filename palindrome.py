@@ -14,7 +14,10 @@ def reverseString(word):
         return word [-1] + reverseString(word[:-1])
 
 def isPalindrome(word):
-    """tests whether or not a string is a palindrome
+    """Removes non-leters & tests whether or not a string is a palindrome
     runtime is (O)n""" 
     new = ''.join(char.lower() for char in word if char in ascii_letters)
-    return len(new) < 2 or new[0] == new[-1] and isPalindrome(new[1:-1])
+    if len(new) < 2:
+        return True
+    else:
+        return new[0] == new[-1] and isPalindrome(new[1:-1])

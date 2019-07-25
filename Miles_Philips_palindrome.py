@@ -20,4 +20,4 @@ def isPalindrome(word):
     if len(new) < 2:
         return True
     else:
-        return new[0] == new[-1] + isPalindrome(new[1:-1])
+        return new[0] == new[-1] and isPalindrome(new[1:-1])
